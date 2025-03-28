@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar } from 'lucide-react';
+import { ArrowRight, Calendar, Phone } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -25,7 +25,7 @@ const Contact = () => {
 
           <div className="flex flex-col items-center justify-center">
             <a 
-              href="https://calendly.com/devx/30min" 
+              href="https://calendly.com/xcanetechnologies/devx" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-full sm:w-auto"
@@ -36,12 +36,28 @@ const Contact = () => {
               </Button>
             </a>
 
-            <p className="mt-6 text-sm text-white/50">
-              Or email me directly at{" "}
-              <a href="mailto:hello@devx.io" className="text-neon-blue hover:underline">
-                hello@devx.io
-              </a>
-            </p>
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/50">
+              <p>
+                Email me at{" "}
+                <a href="mailto:xcanetechnologies@gmail.com" className="text-neon-blue hover:underline">
+                  xcanetechnologies@gmail.com
+                </a>
+              </p>
+              
+              <span className="hidden sm:inline">•</span>
+              
+              <p>
+                <a 
+                  href="https://wa.me/85264728031" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center text-neon-blue hover:underline"
+                >
+                  <Phone size={14} className="mr-1" />
+                  WhatsApp: +852 6472 8031
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
