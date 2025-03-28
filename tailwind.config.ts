@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				neon: {
+					blue: '#00f3ff',
+					purple: '#8B5CF6',
+					pink: '#D946EF'
+				},
+				dark: '#0F1121',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +91,32 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				glow: {
+					'0%': { 
+						boxShadow: '0 0 10px rgba(139, 92, 246, 0.5)',
+						borderColor: 'rgba(139, 92, 246, 0.3)'
+					},
+					'50%': { 
+						boxShadow: '0 0 20px rgba(139, 92, 246, 0.8)', 
+						borderColor: 'rgba(139, 92, 246, 0.6)'
+					},
+					'100%': { 
+						boxShadow: '0 0 10px rgba(139, 92, 246, 0.5)',
+						borderColor: 'rgba(139, 92, 246, 0.3)'
+					}
+				},
+				float: {
+					'0%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' },
+					'100%': { transform: 'translateY(0px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 4s ease-in-out infinite',
+				'float': 'float 4s ease-in-out infinite'
 			}
 		}
 	},
